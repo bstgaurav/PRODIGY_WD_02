@@ -1,0 +1,127 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #170b3b, #315fc5);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 550px;
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: #170b3b;
+    font-size: 36px;
+    margin-bottom: 35px;
+}
+
+.stopwatch {
+    background: #170b3b;
+    padding: 35px 15px;
+    border-radius: 15px;
+}
+
+#display {
+    color: #00d4ff;
+    font-size: clamp(30px, 7vw, 48px);
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-family: monospace;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+button {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#startBtn {
+    background: #28a745;
+    color: white;
+}
+
+#pauseBtn {
+    background: #ffc107;
+    color: black;
+}
+
+#resetBtn {
+    background: #dc3545;
+    color: white;
+}
+
+#lapBtn {
+    background: #00bcd4;
+    color: white;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    opacity: 0.85;
+}
+
+.lap-container {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.lap-container h2 {
+    color: #170b3b;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#lapList {
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#lapList li {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    margin-bottom: 8px;
+    background: #eef1ff;
+    border-radius: 8px;
+    color: #170b3b;
+    font-weight: bold;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 25px 15px;
+    }
+
+    button {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+}
